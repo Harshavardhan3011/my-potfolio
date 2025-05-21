@@ -1,165 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Montserrat', sans-serif;
-            background-color: #f4f4f9;
-            margin: 0;
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-        }
-        .header {
-            background-color: #007bff;
-            color: #ffffff;
-            padding: 20px 0;
-            text-align: center;
-            margin-bottom: 30px;
-        }
-        .logo {
-            font-size: 2em;
-            font-weight: 700;
-        }
-        .navbar a {
-            color: #ffffff;
-            margin: 0 15px;
-            text-decoration: none;
-            font-weight: 500;
-            transition: color 0.3s;
-        }
-        .navbar a:hover {
-            color: #ddd;
-        }
-        .contact-section {
-            width: 90%;
-            max-width: 600px;
-            margin: auto;
-            background-color: #ffffff;
-            padding: 40px;
-            border-radius: 15px;
-            box-shadow: 0 8px 30px rgba(0,0,0,0.15);
-            text-align: center;
-        }
-        .contact-section h2 {
-            font-size: 2.5em;
-            color: #007bff;
-            margin-bottom: 20px;
-        }
-        .contact-section p {
-            font-size: 1.2em;
-            color: #555;
-            margin-bottom: 30px;
-        }
-        .contact-form input, .contact-form textarea {
-            width: 100%;
-            margin-bottom: 15px;
-            padding: 12px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            font-size: 1em;
-        }
-        .contact-form button {
-            width: 100%;
-            background-color: #007bff;
-            color: white;
-            padding: 15px;
-            border: none;
-            border-radius: 30px;
-            font-weight: bold;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
-        .contact-form button:hover {
-            background-color: #0056b3;
-        }
-        .footer {
-            background-color: #333;
-            color: #fff;
-            padding: 15px 0;
-            text-align: center;
-            margin-top: auto;
-        }
-        .social-links a img {
-            width: 40px;
-            margin: 0 10px;
-            transition: transform 0.3s ease;
-        }
-        .social-links a img:hover {
-            transform: scale(1.1);
-        }
-        .spinner {
-            display: none;
-            width: 60px;
-            height: 60px;
-            border: 8px solid #f3f3f3;
-            border-radius: 50%;
-            border-top: 8px solid #007bff;
-            animation: spin 1s linear infinite;
-            margin: 20px auto;
-        }
-        @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
-        }
-    </style>
-    <script>
-        function showSpinner() {
-            document.querySelector('.spinner').style.display = 'block';
-        }
-    </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
+  <script>
+    function showSpinner() {
+      document.querySelector('.spinner').style.display = 'block';
+    }
+  </script>
 </head>
 <body>
-    <header class="header">
-        <div class="container">
-            <h1 class="logo">My Portfolio</h1>
-            <nav class="navbar">
-                <a href="index.html">Home</a>
-                <a href="about.html">About</a>
-                <a href="projects.html">Projects</a>
-                <a href="skills.html">Skills</a>
-                <a href="contact.html">Contact</a>
-            </nav>
-        </div>
-    </header>
+  <header class="header">
+    <div class="container">
+      <h1 class="logo">My Portfolio</h1>
+      <nav class="navbar">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="projects.html">Projects</a>
+        <a href="skills.html">Skills</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
 
-    <section class="contact-section">
-        <h2>Contact Me</h2>
-        <p>If you have any questions, feel free to reach out!</p>
-        <div class="spinner"></div>
-        
-        <form action="https://formsubmit.co/roronoazoro30112005@gmail.com" method="POST" class="contact-form" onsubmit="showSpinner()">
-            <input type="text" name="name" placeholder="Your Name" required>
-            <input type="email" name="email" placeholder="Your Email" required>
-            <textarea name="message" placeholder="Your Message" required></textarea>
+  <section class="contact-section container">
+    <h2>Contact Me</h2>
+    <p>If you have any questions, feel free to reach out!</p>
+    <div class="spinner"></div>
 
-            <!-- Hidden Fields -->
-            <input type="hidden" name="_captcha" value="false">
-            <input type="hidden" name="_subject" value="New Contact Form Submission">
-            <input type="hidden" name="_template" value="table">
-           <input type="hidden" name="_next" value="https://harshavardhan3011.github.io/my-potfolio/thank_you.html">
-            <input type="text" name="_honey" style="display:none">
+    <form action="https://formsubmit.co/roronoazoro30112005@gmail.com" method="POST" class="contact-form" onsubmit="showSpinner()">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <textarea name="message" placeholder="Your Message" required></textarea>
 
-            <button type="submit">Send Message</button>
-        </form>
+      <!-- Hidden Fields -->
+      <input type="hidden" name="_captcha" value="false" />
+      <input type="hidden" name="_subject" value="New Contact Form Submission" />
+      <input type="hidden" name="_template" value="table" />
+      <input type="hidden" name="_next" value="https://yourusername.github.io/portfolio/thank_you.html" />
+      <input type="text" name="_honey" style="display:none" />
 
-        <div class="social-links">
-            <a href="https://www.linkedin.com/in/harshavardhanv" target="_blank">
-                <img src="linkedin.jpg" alt="LinkedIn" class="icon">
-            </a>
-            <a href="https://github.com/Harshavardhan3011" target="_blank">
-                <img src="Github.png" alt="GitHub" class="icon">
-            </a>
-        </div>
-    </section>
+      <button type="submit">Send Message</button>
+    </form>
 
-    <footer class="footer">
-        &copy; 2025 My Portfolio. All rights reserved.
-    </footer>
+    <div class="social-links">
+      <a href="https://www.linkedin.com/in/harshavardhanv" target="_blank">
+        <img src="linkedin.jpg" alt="LinkedIn" class="icon" />
+      </a>
+      <a href="https://github.com/your-username" target="_blank">
+        <img src="Github.png" alt="GitHub" class="icon" />
+      </a>
+    </div>
+  </section>
+
+  <footer class="footer">
+    &copy; 2025 My Portfolio. All rights reserved.
+  </footer>
 </body>
 </html>
